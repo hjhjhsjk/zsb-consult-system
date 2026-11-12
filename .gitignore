@@ -53,3 +53,5 @@ desktop.ini
 .workbuddy/
 docs/*
 !docs/后端接口文档.md
+!docs/images/
+!docs/images/**

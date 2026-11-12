@@ -19,6 +19,20 @@
 | 管理端 | 帖子管理 | 列表、隐藏、删除 |
 | 管理端 | 用户管理 | 列表、启用 / 禁用 |
 
+## 界面截图
+
+**学生端**
+
+| 首页 | 院校库 |
+| --- | --- |
+| ![学生端首页](docs/images/user-home.png) | ![院校库](docs/images/user-school-list.png) |
+| **政策咨询** | **论坛** |
+| ![政策咨询](docs/images/user-policy.png) | ![论坛](docs/images/user-bbs.png) |
+
+**管理端**
+
+![管理端登录](docs/images/admin-login.png)
+
 ## 技术栈
 
 **后端**
