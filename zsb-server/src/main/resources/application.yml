@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  # 本地私有配置（数据库密码、JWT 密钥）放在 application-local.yml，该文件已被 .gitignore 排除
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:zsb}?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:root}
+
+  # 文件上传限制：单文件 5MB，单次请求 10MB（前端只允许传一张图）
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    # 全局把 Java 的驼峰字段名转成下划线：userId -> user_id
+    # 前端全站读的都是 school_name / post_time / view_count 这种下划线写法，
+    # 在这一处统一转换，比给每个实体都写 @JsonProperty 更省事、也不会漏。
+    property-naming-strategy: SNAKE_CASE
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    # 开发期打印 SQL，方便查看每条语句实际发出的内容；上线可删
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 项目自定义配置
+zsb:
+  # 图片保存目录（相对项目运行目录），对应访问前缀 /uploads/**
+  upload-dir: ./uploads
+  jwt:
+    # 生产环境请改成随机长字符串，并通过环境变量 JWT_SECRET 注入
+    secret: ${JWT_SECRET:zsb-dev-only-secret-please-change-in-production}
+    # token 有效期：2 小时（毫秒）
+    expire: 7200000
+
+logging:
+  level:
+    com.zsb.zsbserver: debug

@@ -1,0 +1,55 @@
+# ===== 依赖目录 =====
+node_modules/
+.pnpm-store/
+
+# ===== 构建产物 =====
+dist/
+dist-ssr/
+target/
+build/
+*.jar
+*.war
+*.class
+
+# ===== 前端缓存与日志 =====
+.vite/
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== IDE / 编辑器 =====
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/*
+!.vscode/extensions.json
+.settings/
+.classpath
+.project
+.factorypath
+.sts4-cache
+
+# ===== 本地配置（含数据库密码、JWT 密钥，禁止提交）=====
+application-local.yml
+**/application-local.yml
+.env
+.env.*
+*.local
+
+# ===== 运行时产物（用户上传的图片）=====
+uploads/
+**/uploads/
+
+# ===== 操作系统文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 工具 / 个人资料（不上传）=====
+.workbuddy/
+docs/*
+!docs/后端接口文档.md

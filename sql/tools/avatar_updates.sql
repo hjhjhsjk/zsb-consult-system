@@ -1,0 +1,15 @@
+UPDATE user SET avatar = '/uploads/avatar/gen/u2.svg' WHERE id = 2;
+UPDATE user SET avatar = '/uploads/avatar/gen/u14.svg' WHERE id = 14;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1000.svg' WHERE id = 1000;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1001.svg' WHERE id = 1001;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1002.svg' WHERE id = 1002;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1003.svg' WHERE id = 1003;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1004.svg' WHERE id = 1004;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1005.svg' WHERE id = 1005;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1006.svg' WHERE id = 1006;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1007.svg' WHERE id = 1007;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1008.svg' WHERE id = 1008;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1009.svg' WHERE id = 1009;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1010.svg' WHERE id = 1010;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1011.svg' WHERE id = 1011;
+UPDATE user SET avatar = '/uploads/avatar/gen/u1012.svg' WHERE id = 1012;
